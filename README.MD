@@ -6,3 +6,7 @@ a limit date, a priority and change the current status form "en cours" (going on
 
 ## Running
 Main class is the service's entry point, if you ran its main method with your IDE, the application should run.
+
+Here's an example of the inferface :
+
+![Interface](https://image.noelshack.com/fichiers/2023/24/2/1686657690-screenshot-from-2023-06-13-13-57-02.png)
