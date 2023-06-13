@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<VBox fx:controller="com.myapp.taskmanager.controller.MainController" xmlns:fx="http://javafx.com/fxml">
+    <HBox>
+        <TextField fx:id="taskNameField" promptText="Nom de la tâche" />
+        <DatePicker fx:id="dueDatePicker" promptText="Date limite" />
+        <ComboBox fx:id="priorityComboBox" promptText="Priorité">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Haute" />
+                    <String fx:value="Moyenne" />
+                    <String fx:value="Faible" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <Button text="Ajouter" onAction="#addTask" />
+    </HBox>
+    <TableView fx:id="taskTable">
+        <columns>
+            <TableColumn text="Nom" fx:id="taskNameColumn" />
+            <TableColumn text="Date limite" fx:id="dueDateColumn" />
+            <TableColumn text="Priorité" fx:id="priorityColumn" />
+            <TableColumn text="Statut" fx:id="statusColumn" />
+            <TableColumn fx:id="statusButtonColumn" prefWidth="100.0" text="Action" />
+        </columns>
+    </TableView>
+</VBox>
